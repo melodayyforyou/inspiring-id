@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>inspiring.id</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#1C1917;--bg2:#141210;--card:#292524;--card2:#3C3836;--card3:#44403C;--bdr:rgba(255,255,255,0.08);--bdr2:#44403C;--or:#F97316;--od:rgba(249,115,22,0.13);--ob:rgba(249,115,22,0.3);--wh:#FAFAF9;--mu:#A8A29E;--dm:#78716C;--fd:'Playfair Display',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--wh);font-family:var(--fb);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:60px;background:rgba(20,18,16,0.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr)}
+.logo{font-family:var(--fd);font-size:18px;font-weight:700;cursor:pointer}.logo span{color:var(--or)}
+.ntabs{display:flex;gap:4px}.ntab{background:none;border:none;color:var(--mu);padding:7px 13px;font-family:var(--fb);font-size:13px;cursor:pointer;transition:all .18s;border-radius:3px}.ntab:hover{color:var(--wh);background:rgba(255,255,255,0.05)}.ntab.on{color:var(--or);background:var(--od)}
+.ncta{background:var(--or);color:#fff;border:none;padding:8px 18px;font-family:var(--fb);font-size:13px;font-weight:500;cursor:pointer;transition:opacity .18s}.ncta:hover{opacity:.85}
+@media(max-width:640px){.ntabs{display:none}}
+#s-hero{min-height:100vh;display:flex;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden}
+.hglow{position:absolute;top:-10%;right:-5%;width:55%;height:80%;background:radial-gradient(ellipse,rgba(249,115,22,0.07) 0%,transparent 65%);pointer-events:none}
+.hw{max-width:1160px;width:100%;margin:0 auto;position:relative;z-index:1}
+.htag{display:inline-flex;align-items:center;gap:8px;background:var(--od);border:1px solid var(--ob);padding:5px 14px;margin-bottom:28px;font-size:11px;color:var(--or);font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--or);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+h1{font-family:var(--fd);font-size:clamp(44px,6.5vw,82px);font-weight:900;line-height:1.0;letter-spacing:-.03em;max-width:680px;margin-bottom:24px}h1 em{color:var(--or);font-style:italic}
+.hsub{font-size:17px;color:var(--mu);line-height:1.7;max-width:440px;margin-bottom:40px;font-weight:300}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:64px}
+.btnp{background:var(--or);color:#fff;border:none;padding:13px 26px;font-family:var(--fb);font-size:14px;font-weight:500;cursor:pointer;transition:all .18s;display:inline-flex;align-items:center;gap:8px}.btnp:hover{opacity:.88;transform:translateY(-1px)}
+.btng{background:transparent;color:var(--mu);border:1px solid var(--bdr2);padding:13px 26px;font-family:var(--fb);font-size:14px;cursor:pointer;transition:all .18s}.btng:hover{border-color:var(--mu);color:var(--wh)}
+.hstats{display:flex;gap:48px;flex-wrap:wrap}.sn{font-family:var(--fd);font-size:34px;font-weight:700;line-height:1}.sl{font-size:11px;color:var(--dm);margin-top:4px;letter-spacing:.07em;text-transform:uppercase}
+.ticker{background:var(--bg2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:14px 0;overflow:hidden}
+.tt{display:flex;animation:tick 28s linear infinite;width:max-content}.tt:hover{animation-play-state:paused}
+.tc{background:rgba(255,255,255,.05);border:1px solid var(--bdr);padding:6px 18px;font-size:12px;font-weight:600;color:var(--dm);white-space:nowrap;margin-right:10px}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+section{padding:90px 5%}.si{max-width:1160px;margin:0 auto}
+.ey{font-size:11px;color:var(--or);font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}.ey::before{content:'';width:20px;height:1px;background:var(--or)}
+h2{font-family:var(--fd);font-size:clamp(28px,3.8vw,48px);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+.ssub{font-size:15px;color:var(--mu);max-width:500px;line-height:1.7;margin-bottom:52px;font-weight:300}
+#s-brands{background:var(--bg2)}
+.ecard{background:var(--card);border:1px solid var(--bdr2);padding:36px;max-width:820px;margin:0 auto 60px}
+.eh{font-size:17px;font-weight:600;margin-bottom:6px}.ed{font-size:13px;color:var(--mu);margin-bottom:28px}
+.slbls{display:flex;justify-content:space-between;font-size:12px;color:var(--dm);margin-bottom:8px}.slval{color:var(--or);font-weight:700;font-size:17px}
+input[type=range]{-webkit-appearance:none;width:100%;height:5px;background:var(--bdr2);outline:none;cursor:pointer;border-radius:3px;margin-bottom:28px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--or);cursor:pointer;border:3px solid var(--bg2)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--or);cursor:pointer;border:3px solid var(--bg2)}
+.emg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}@media(max-width:600px){.emg{grid-template-columns:repeat(2,1fr)}}
+.emc{background:rgba(255,255,255,.04);border:1px solid var(--bdr);padding:16px;text-align:center}.emv{font-size:22px;font-weight:700;color:var(--or);font-family:var(--fd)}.eml{font-size:10px;color:var(--mu);margin-top:5px;letter-spacing:.06em;text-transform:uppercase}
+.kmix{display:flex;gap:8px;flex-wrap:wrap}.kp{padding:5px 14px;border-radius:99px;font-size:12px;font-weight:500;border:1px solid var(--bdr2);color:var(--mu);transition:all .2s}.kp.on{background:var(--od);border-color:var(--ob);color:var(--or)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:60px}@media(max-width:720px){.cgrid{grid-template-columns:1fr 1fr}}@media(max-width:460px){.cgrid{grid-template-columns:1fr}}
+.flip{height:200px;perspective:1000px;cursor:pointer}
+.fi2{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flip:hover .fi2,.flip.open .fi2{transform:rotateY(180deg)}
+.ff,.fb{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:22px;display:flex;flex-direction:column;justify-content:flex-end}
+.ff{background:var(--card);border:1px solid var(--bdr2)}.fb{background:var(--card2);border:1px solid var(--ob);transform:rotateY(180deg)}
+.fcat{font-size:10px;font-weight:600;color:var(--or);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}.ftit{font-family:var(--fd);font-size:18px;font-weight:700}
+.fkpi{font-size:22px;font-weight:700;color:var(--or);font-family:var(--fd);margin-bottom:4px}.fst{font-size:13px;color:var(--mu);line-height:1.6}.fhint{position:absolute;top:14px;right:14px;font-size:10px;color:var(--dm)}
+#s-gallery{background:var(--bg)}
+.frow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}.fch{padding:7px 16px;border:1px solid var(--bdr2);background:transparent;color:var(--mu);font-family:var(--fb);font-size:13px;cursor:pointer;transition:all .18s}.fch.on,.fch:hover{background:var(--od);border-color:var(--ob);color:var(--or)}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:14px;margin-bottom:44px}
+.kc{background:var(--card);border:1px solid var(--bdr2);overflow:hidden;transition:all .2s;cursor:pointer}.kc:hover{border-color:var(--or);transform:translateY(-2px)}
+.kav{width:100%;aspect-ratio:1;background:var(--card2);display:flex;align-items:center;justify-content:center;position:relative}
+.kbl{width:56%;height:56%;border-radius:50%;background:var(--card3);filter:blur(6px)}
+.klw{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,18,16,.25)}
+.klk{width:26px;height:26px;background:var(--or);display:flex;align-items:center;justify-content:center}
+.ki{padding:12px 12px 0}.kpl{display:inline-block;padding:3px 8px;margin-bottom:7px;font-size:9px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;border:1px solid var(--bdr2);color:var(--dm)}.kpl.tt{border-color:var(--ob);color:var(--or)}
+.kt{font-family:var(--fd);font-size:17px;font-weight:700;margin-bottom:2px}.km{font-size:11px;color:var(--mu);margin-bottom:3px}.kf{font-size:12px;color:var(--dm);margin-bottom:12px}
+.kg{border-top:1px solid var(--bdr2);padding:9px 12px;font-size:10px;color:var(--or);display:flex;align-items:center;gap:5px;background:var(--od)}
+.gctabtn{text-align:center;padding:36px;border:1px solid var(--bdr2);background:var(--card)}.gctabtn p{color:var(--mu);font-size:14px;margin-bottom:18px}.gctabtn strong{color:var(--wh)}
+#s-brief{background:var(--bg2)}
+.bfl{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}@media(max-width:820px){.bfl{grid-template-columns:1fr;gap:44px}}
+.bstk{position:sticky;top:80px}.bq{font-family:var(--fd);font-size:clamp(18px,2.2vw,24px);font-style:italic;color:var(--mu);line-height:1.55;border-left:3px solid var(--or);padding-left:22px;margin-top:36px}
+.fcard{background:var(--card);border:1px solid var(--bdr2);padding:36px}.fcard h3{font-family:var(--fd);font-size:22px;font-weight:700;margin-bottom:6px}.fsub{font-size:13px;color:var(--mu);margin-bottom:28px}
+.fg{margin-bottom:18px}.fg label{display:block;font-size:11px;color:var(--dm);margin-bottom:7px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--bg);border:1px solid var(--bdr2);color:var(--wh);padding:11px 13px;font-family:var(--fb);font-size:13px;outline:none;transition:border-color .18s;-webkit-appearance:none;appearance:none}.fg select{cursor:pointer}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--or)}.fg textarea{resize:vertical;min-height:72px}
+.fgr{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:500px){.fgr{grid-template-columns:1fr}}
+.bsub{width:100%;background:var(--or);color:#fff;border:none;padding:15px;font-family:var(--fb);font-size:14px;font-weight:500;cursor:pointer;transition:opacity .18s;margin-top:8px}.bsub:hover{opacity:.87}
+.fnote{font-size:11px;color:var(--dm);margin-top:10px;text-align:center;line-height:1.6}
+#s-creators{background:var(--bg)}.crl{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}@media(max-width:820px){.crl{grid-template-columns:1fr;gap:44px}}
+.mcard{background:var(--card);border:1px solid var(--bdr2);padding:32px}.mt{font-size:16px;font-weight:600;margin-bottom:4px}.md{font-size:13px;color:var(--mu);margin-bottom:28px}
+.msteps{display:flex;gap:8px;margin-bottom:22px}.ms{flex:1;height:3px;background:var(--bdr2);transition:background .3s}.ms.dn{background:var(--or)}
+.mqt{font-size:11px;font-weight:600;margin-bottom:12px;color:var(--mu);letter-spacing:.06em;text-transform:uppercase}
+.mqo{display:flex;gap:8px;flex-wrap:wrap}.mopt{padding:8px 16px;border:1px solid var(--bdr2);background:transparent;color:var(--mu);font-family:var(--fb);font-size:13px;cursor:pointer;transition:all .18s}.mopt:hover{border-color:var(--mu);color:var(--wh)}.mopt.pk{background:var(--od);border-color:var(--ob);color:var(--or)}
+.mres{display:none;margin-top:22px}.mins{background:var(--od);border:1px solid var(--ob);padding:14px 16px;font-size:13px;color:var(--or);margin-bottom:16px;line-height:1.6}
+.mcrow{background:rgba(255,255,255,.03);border:1px solid var(--bdr2);padding:14px 16px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.mcl strong{display:block;font-size:14px;margin-bottom:3px}.mcl span{font-size:12px;color:var(--mu)}.mcr{font-size:12px;color:var(--or);font-weight:600;white-space:nowrap}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.tcard{background:var(--card);border:1px solid var(--bdr2);padding:22px}.tcard.ft{border-color:var(--ob)}
+.tlbl{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--or);margin-bottom:6px}.tnm{font-family:var(--fd);font-size:20px;font-weight:700;margin-bottom:12px}
+.tpk{font-size:12px;color:var(--mu);padding:5px 0;border-bottom:1px solid var(--bdr);display:flex;align-items:center;gap:8px}.tpk:last-child{border-bottom:none}.tdt{width:5px;height:5px;border-radius:50%;background:var(--or);flex-shrink:0}
+#s-register{background:var(--bg2)}.rtabs{display:flex;gap:0;margin-bottom:32px;border:1px solid var(--bdr2);width:fit-content}
+.rtab{padding:10px 28px;background:transparent;border:none;color:var(--mu);font-family:var(--fb);font-size:13px;font-weight:500;cursor:pointer;transition:all .18s}.rtab.on{background:var(--or);color:#fff}
+.rpanel{display:none}.rpanel.sh{display:block}
+footer{border-top:1px solid var(--bdr);padding:36px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.flogo{font-family:var(--fd);font-size:17px;font-weight:700}.flogo span{color:var(--or)}.fcp{font-size:12px;color:var(--dm)}
+.mbg{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:900;display:none;align-items:center;justify-content:center;padding:20px}.mbg.open{display:flex}
+.modal{background:var(--card);border:1px solid var(--bdr2);max-width:460px;width:100%;padding:36px;position:relative}
+.mx{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--mu);font-size:22px;cursor:pointer;line-height:1}
+.mtag{font-size:10px;color:var(--or);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;font-weight:600}
+.modal h3{font-family:var(--fd);font-size:22px;font-weight:700;margin-bottom:8px}.modal p{font-size:14px;color:var(--mu);margin-bottom:26px;line-height:1.7}
+.mbtns{display:flex;flex-direction:column;gap:10px}
+.mwa{background:var(--or);color:#fff;border:none;padding:13px;font-family:var(--fb);font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.mfm{background:transparent;color:var(--mu);border:1px solid var(--bdr2);padding:13px;font-family:var(--fb);font-size:14px;cursor:pointer;transition:all .18s}.mfm:hover{border-color:var(--mu);color:var(--wh)}
+.msuc{display:none;text-align:center;padding:16px 0;color:var(--or);font-size:14px;font-weight:500}
+.fi{opacity:0;transform:translateY(20px);transition:opacity .55s,transform .55s}.fi.in{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo" onclick="scrollTo(0,0)">inspiring<span>.id</span></div>
+  <div class="ntabs">
+    <button class="ntab" onclick="go('s-brands',this)">For Brands</button>
+    <button class="ntab" onclick="go('s-gallery',this)">KOL Network</button>
+    <button class="ntab" onclick="go('s-creators',this)">For Creators</button>
+    <button class="ntab" onclick="go('s-register',this)">Register</button>
+  </div>
+  <button class="ncta" onclick="om('brief-modal')">Submit a Brief</button>
+</nav>
+
+<section id="s-hero">
+  <div class="hglow"></div>
+  <div class="hw">
+    <div class="htag fi"><span class="dot"></span>Indonesia's Creator Network</div>
+    <h1 class="fi">Your Network Is<br/>Your <em>Product.</em></h1>
+    <p class="hsub fi">We connect brands with the right creators — nano to mega. Campaigns that convert, not just impress.</p>
+    <div class="hbtns fi">
+      <button class="btnp" onclick="om('brief-modal')">Submit a Brief <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      <button class="btng" onclick="go('s-creators',null)">Join as Creator</button>
+    </div>
+    <div class="hstats fi">
+      <div><div class="sn">500+</div><div class="sl">Verified Creators</div></div>
+      <div><div class="sn">3yr+</div><div class="sl">Campaign History</div></div>
+      <div><div class="sn">Rp 1B+</div><div class="sl">Managed</div></div>
+      <div><div class="sn">50+</div><div class="sl">Brand Clients</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker"><div class="tt" id="ticker"></div></div>
+
+<section id="s-brands">
+  <div class="si">
+    <div class="fi"><div class="ey">For Brands</div><h2>Plan your campaign.<br/>Know what you get.</h2>
+    <p class="ssub">Drag the slider — see your estimated reach, KOL count, and recommended creator mix update live.</p></div>
+    <div class="ecard fi">
+      <div class="eh">Campaign Budget Estimator</div>
+      <div class="ed">Move the slider to see how your budget translates to real creator reach and content output.</div>
+      <div class="slbls"><span>Rp 10 Juta</span><span id="bval" class="slval">Rp 100 Juta</span><span>Rp 1 Miliar</span></div>
+      <input type="range" id="bsl" min="10" max="1000" value="100" step="10" oninput="est(this.value)"/>
+      <div class="emg">
+        <div class="emc"><div class="emv" id="er">2.1M</div><div class="eml">Est. Reach</div></div>
+        <div class="emc"><div class="emv" id="ek">8</div><div class="eml">KOL Count</div></div>
+        <div class="emc"><div class="emv" id="ee">6.2%</div><div class="eml">Avg Eng. Rate</div></div>
+        <div class="emc"><div class="emv" id="ec">18</div><div class="eml">Content Pieces</div></div>
+      </div>
+      <div style="font-size:11px;color:var(--dm);margin-bottom:10px;letter-spacing:.07em;text-transform:uppercase;font-weight:500">Recommended KOL Mix</div>
+      <div class="kmix" id="kmix"></div>
+    </div>
+    <div class="fi" style="text-align:center;margin-bottom:28px">
+      <div class="ey" style="justify-content:center">Case Studies</div>
+      <h2 style="margin-bottom:6px">Campaigns that delivered.</h2>
+      <p class="ssub" style="margin:0 auto;text-align:center;margin-bottom:28px">Hover each card to see the numbers.</p>
+    </div>
+    <div class="cgrid fi" id="cgrid"></div>
+    <div class="fi" style="text-align:center;padding:36px;background:var(--card);border:1px solid var(--bdr2)">
+      <p style="color:var(--mu);font-size:15px;margin-bottom:18px">Ready to build your campaign?<br/><strong style="color:var(--wh)">Submit a brief and we'll shortlist the right creators.</strong></p>
+      <button class="btnp" onclick="go('s-brief',null)">Start a Campaign</button>
+    </div>
+  </div>
+</section>
+
+<section id="s-gallery">
+  <div class="si">
+    <div class="fi"><div class="ey">KOL Network</div><h2>500+ creators.<br/>Zero names shown.</h2>
+    <p class="ssub">Our database is private. Filter by what matters, then let's talk.</p></div>
+    <div class="frow fi" id="frow"></div>
+    <div class="kgrid" id="kgrid"></div>
+    <div class="gctabtn fi">
+      <p>Want the full list with names, handles, and rate cards?<br/><strong>Sign a quick NDA and we'll send everything within 24 hours.</strong></p>
+      <button class="btnp" onclick="om('brief-modal')" style="margin-top:4px">Request Full Roster</button>
+    </div>
+  </div>
+</section>
+
+<section id="s-brief">
+  <div class="si">
+    <div class="bfl">
+      <div class="bstk fi">
+        <div class="ey">For Brands</div><h2>Tell us about<br/>your campaign.</h2>
+        <p class="ssub" style="margin-bottom:0">The more detail you give, the sharper the shortlist we bring to the meeting.</p>
+        <blockquote class="bq">"We don't show the list until we know the brief. That's how we protect your budget."</blockquote>
+      </div>
+      <div class="fcard fi">
+        <h3>Campaign Brief</h3><p class="fsub">We review and respond within 24 hours.</p>
+        <form id="brf" onsubmit="sf(event,'brf','brfb','brfm')">
+          <div class="fgr">
+            <div class="fg"><label>Brand / Company</label><input type="text" placeholder="Brand name" required/></div>
+            <div class="fg"><label>Contact Name</label><input type="text" placeholder="Your name" required/></div>
+          </div>
+          <div class="fg"><label>Campaign Objective</label><select required><option value="" disabled selected>Choose objective</option><option>Brand Awareness</option><option>Product Launch</option><option>Engagement / Community</option><option>Conversion / Sales</option><option>App Downloads</option></select></div>
+          <div class="fgr">
+            <div class="fg"><label>Target Niche</label><select><option value="" disabled selected>Select niche</option><option>Beauty &amp; Skincare</option><option>Fashion</option><option>Tech &amp; Gadgets</option><option>Food &amp; Lifestyle</option><option>Parenting</option><option>Sports</option><option>Finance</option><option>Gaming</option></select></div>
+            <div class="fg"><label>KOL Tier</label><select><option value="" disabled selected>Select tier</option><option>Nano (1K-10K)</option><option>Micro (10K-100K)</option><option>Macro (100K-1M)</option><option>Mega (1M+)</option><option>Mix of tiers</option></select></div>
+          </div>
+          <div class="fgr">
+            <div class="fg"><label>Platform</label><select><option value="" disabled selected>Platform</option><option>TikTok</option><option>Instagram</option><option>YouTube</option><option>All Platforms</option></select></div>
+            <div class="fg"><label>Budget Range</label><select><option value="" disabled selected>Budget</option><option>Rp 10-50 Juta</option><option>Rp 50-300 Juta</option><option>Rp 300 Juta - 1 Miliar</option><option>Rp 1 Miliar+</option></select></div>
+          </div>
+          <div class="fg"><label>WhatsApp Number</label><input type="tel" placeholder="+62 8xx xxxx xxxx" required/></div>
+          <div class="fg"><label>Campaign Details (optional)</label><textarea placeholder="Product, target audience, timeline, references..."></textarea></div>
+          <button type="submit" class="bsub" id="brfb">Submit Brief</button>
+          <div id="brfm" class="msuc"></div>
+          <p class="fnote">After submitting we contact you on WhatsApp within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s-creators">
+  <div class="si">
+    <div class="crl">
+      <div class="fi">
+        <div class="ey">For Creators</div><h2>Find campaigns<br/>that fit you.</h2>
+        <p class="ssub">3 quick questions and we'll match you to active campaigns in our network right now.</p>
+        <div class="mcard">
+          <div class="mt">Campaign Matcher</div>
+          <div class="md">Tell us about yourself — see what's available for you.</div>
+          <div class="msteps"><div class="ms" id="ms0"></div><div class="ms" id="ms1"></div><div class="ms" id="ms2"></div></div>
+          <div id="mq0"><div class="mqt">Your main platform</div><div class="mqo">
+            <button class="mopt" onclick="po(0,'TikTok',this)">TikTok</button>
+            <button class="mopt" onclick="po(0,'Instagram',this)">Instagram</button>
+            <button class="mopt" onclick="po(0,'YouTube',this)">YouTube</button>
+            <button class="mopt" onclick="po(0,'Multi',this)">Multi-platform</button>
+          </div></div>
+          <div id="mq1" style="display:none"><div class="mqt">Your primary niche</div><div class="mqo">
+            <button class="mopt" onclick="po(1,'Beauty',this)">Beauty</button>
+            <button class="mopt" onclick="po(1,'Lifestyle',this)">Lifestyle</button>
+            <button class="mopt" onclick="po(1,'Tech',this)">Tech</button>
+            <button class="mopt" onclick="po(1,'Food',this)">Food</button>
+            <button class="mopt" onclick="po(1,'Fashion',this)">Fashion</button>
+            <button class="mopt" onclick="po(1,'Other',this)">Other</button>
+          </div></div>
+          <div id="mq2" style="display:none"><div class="mqt">Your follower count</div><div class="mqo">
+            <button class="mopt" onclick="po(2,'1K-10K',this)">1K-10K (Nano)</button>
+            <button class="mopt" onclick="po(2,'10K-100K',this)">10K-100K (Micro)</button>
+            <button class="mopt" onclick="po(2,'100K-1M',this)">100K-1M (Macro)</button>
+            <button class="mopt" onclick="po(2,'1M+',this)">1M+ (Mega)</button>
+          </div></div>
+          <div class="mres" id="mres">
+            <div class="mins" id="mins"></div>
+            <div id="mlist"></div>
+            <button class="btnp" style="width:100%;margin-top:4px" onclick="go('s-register',null)">Apply to These Campaigns</button>
+          </div>
+        </div>
+      </div>
+      <div class="fi">
+        <div class="ey" style="margin-top:8px">Creator Tiers</div>
+        <h2 style="margin-bottom:10px">Every tier<br/>gets a seat.</h2>
+        <p class="ssub" style="margin-bottom:8px">Nano to mega — inspiring.id works with all sizes.</p>
+        <div class="tgrid">
+          <div class="tcard"><div class="tlbl">Nano + Micro</div><div class="tnm">Growing Creators</div>
+            <div class="tpk"><span class="tdt"></span>1K - 100K followers</div>
+            <div class="tpk"><span class="tdt"></span>Higher engagement rates</div>
+            <div class="tpk"><span class="tdt"></span>Niche-specific campaigns</div>
+            <div class="tpk"><span class="tdt"></span>Priority for SME clients</div>
+            <div class="tpk"><span class="tdt"></span>Creator community access</div>
+          </div>
+          <div class="tcard ft"><div class="tlbl">Macro + Mega</div><div class="tnm">Established Creators</div>
+            <div class="tpk"><span class="tdt"></span>100K - 1M+ followers</div>
+            <div class="tpk"><span class="tdt"></span>Brand deal negotiations</div>
+            <div class="tpk"><span class="tdt"></span>Exclusive brand access</div>
+            <div class="tpk"><span class="tdt"></span>Dedicated PIC support</div>
+            <div class="tpk"><span class="tdt"></span>Long-term partnership focus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s-register">
+  <div class="si">
+    <div class="fi"><div class="ey">Register</div><h2>Join inspiring.id.</h2>
+    <p class="ssub">Brand looking to run a campaign, or creator ready to monetize your audience.</p></div>
+    <div class="rtabs fi">
+      <button class="rtab on" onclick="rt('brand',this)">I'm a Brand</button>
+      <button class="rtab" onclick="rt('creator',this)">I'm a Creator</button>
+    </div>
+    <div class="rpanel sh" id="rp-brand">
+      <div class="fcard fi" style="max-width:640px"><h3>Brand Registration</h3><p class="fsub">Tell us about your brand and goals.</p>
+        <form id="brf2" onsubmit="sf(event,'brf2','brfb2','brfm2')">
+          <div class="fgr">
+            <div class="fg"><label>Company Name</label><input type="text" required placeholder="Your company"/></div>
+            <div class="fg"><label>Industry</label><select><option value="" disabled selected>Select</option><option>FMCG</option><option>Tech</option><option>Fashion</option><option>F&amp;B</option><option>Finance</option><option>E-commerce</option><option>Other</option></select></div>
+          </div>
+          <div class="fgr">
+            <div class="fg"><label>Contact Name</label><input type="text" required placeholder="Full name"/></div>
+            <div class="fg"><label>WhatsApp</label><input type="tel" required placeholder="+62 8xx xxxx xxxx"/></div>
+          </div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="work@company.com"/></div>
+          <div class="fgr">
+            <div class="fg"><label>Campaign Budget</label><select><option value="" disabled selected>Select range</option><option>Rp 10-50 Juta</option><option>Rp 50-300 Juta</option><option>Rp 300 Juta - 1 Miliar</option><option>Rp 1 Miliar+</option></select></div>
+            <div class="fg"><label>Primary Goal</label><select><option value="" disabled selected>Select goal</option><option>Awareness</option><option>Product Launch</option><option>Sales / Conversion</option><option>Community Building</option></select></div>
+          </div>
+          <div class="fg"><label>About your brand</label><textarea placeholder="What you do, who your audience is, what you've tried before..."></textarea></div>
+          <button type="submit" class="bsub" id="brfb2">Register as Brand</button>
+          <div id="brfm2" class="msuc"></div>
+        </form>
+      </div>
+    </div>
+    <div class="rpanel" id="rp-creator">
+      <div class="fcard fi" style="max-width:640px"><h3>Creator Registration</h3><p class="fsub">Open to all tiers — nano, micro, macro, mega.</p>
+        <form id="crf" onsubmit="sf(event,'crf','crfb','crfm')">
+          <div class="fg"><label>Full Name</label><input type="text" required placeholder="Your real name"/></div>
+          <div class="fgr">
+            <div class="fg"><label>TikTok Username</label><input type="text" placeholder="@username"/></div>
+            <div class="fg"><label>Instagram Username</label><input type="text" placeholder="@username"/></div>
+          </div>
+          <div class="fgr">
+            <div class="fg"><label>TikTok Followers</label><input type="number" placeholder="e.g. 25000"/></div>
+            <div class="fg"><label>Instagram Followers</label><input type="number" placeholder="e.g. 12000"/></div>
+          </div>
+          <div class="fgr">
+            <div class="fg"><label>Primary Niche</label><select required><option value="" disabled selected>Select niche</option><option>Beauty &amp; Skincare</option><option>Fashion</option><option>Food &amp; Beverage</option><option>Lifestyle</option><option>Tech</option><option>Parenting</option><option>Sports</option><option>Education</option><option>Finance</option><option>Gaming</option></select></div>
+            <div class="fg"><label>Gender</label><select required><option value="" disabled selected>Select</option><option>Female</option><option>Male</option></select></div>
+          </div>
+          <div class="fgr">
+            <div class="fg"><label>City / Domicile</label><input type="text" placeholder="Jakarta, Bali, etc."/></div>
+            <div class="fg"><label>Age</label><input type="number" placeholder="Your age"/></div>
+          </div>
+          <div class="fg"><label>Rate Card (optional)</label><input type="text" placeholder="e.g. Rp 1.500.000 per TikTok video"/></div>
+          <div class="fg"><label>WhatsApp Number</label><input type="tel" required placeholder="+62 8xx xxxx xxxx"/></div>
+          <button type="submit" class="bsub" id="crfb">Submit Registration</button>
+          <div id="crfm" class="msuc"></div>
+          <p class="fnote">Our team reviews all submissions and contacts approved creators on WhatsApp.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo">inspiring<span>.id</span></div>
+  <div class="fcp">2025 inspiring.id - Jakarta and Bali - All rights reserved</div>
+</footer>
+
+<div class="mbg" id="brief-modal" onclick="if(event.target===this)cm('brief-modal')">
+  <div class="modal">
+    <button class="mx" onclick="cm('brief-modal')">x</button>
+    <div class="mtag">Start Here</div>
+    <h3>Let's talk about<br/>your campaign.</h3>
+    <p>Choose how you'd like to connect. We respond within a few hours.</p>
+    <div class="mbtns">
+      <button class="mwa" onclick="openWA()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </button>
+      <button class="mfm" onclick="cm('brief-modal');go('s-brief',null)">Fill the Brief Form Instead</button>
+    </div>
+  </div>
+</div>
+<script>
+var BRANDS=['Wardah','Tokopedia','Shopee','Gojek','Samsung','BCA','Indomie','Grab','Traveloka','Unilever','OVO','Blibli','Philips','Baseus','Garnier','L\'Oreal','Sunsilk','Pantene','Xiaomi','DANA','Lazada','Zalora','Maybelline','Ponds'];
+var CASES=[{cat:'Beauty',t:'Skincare Launch',kpi:'12.4M',m:'Impressions',d:'32 Micro+Nano KOLs - 8% avg ER - 3-week campaign'},{cat:'F&B',t:'Food Brand Collab',kpi:'87%',m:'Reach Goal Hit',d:'18 Food KOLs - TikTok-first - Rp 75M budget'},{cat:'Tech',t:'App Download Push',kpi:'24K',m:'New Downloads',d:'15 Tech KOLs - IG + TikTok - 14-day sprint'},{cat:'Fashion',t:'Collection Drop',kpi:'9.1%',m:'Engagement Rate',d:'12 Fashion Macros - IG Reels - Lookbook format'},{cat:'Gaming',t:'Mobile Game Launch',kpi:'3.2M',m:'Video Views',d:'20 Gaming KOLs - YouTube+TikTok - 2-week burst'},{cat:'Finance',t:'Fintech Awareness',kpi:'58%',m:'Brand Recall Lift',d:'10 Finance KOLs - Trust-first narrative - 4 weeks'}];
+var KOLS=[{p:'TikTok',t:'Macro',n:'Beauty',f:'250K-500K',g:'F',tags:['tiktok','beauty']},{p:'Instagram',t:'Micro',n:'Lifestyle',f:'50K-100K',g:'F',tags:['instagram','lifestyle']},{p:'TikTok',t:'Nano',n:'Tech',f:'10K-25K',g:'M',tags:['tiktok','tech']},{p:'Instagram',t:'Macro',n:'Fashion',f:'200K-400K',g:'F',tags:['instagram','fashion']},{p:'TikTok',t:'Micro',n:'Food',f:'80K-150K',g:'M',tags:['tiktok','food']},{p:'Instagram',t:'Mega',n:'Beauty',f:'1M+',g:'F',tags:['instagram','beauty']},{p:'TikTok',t:'Micro',n:'Lifestyle',f:'60K-120K',g:'F',tags:['tiktok','lifestyle']},{p:'Instagram',t:'Nano',n:'Food',f:'8K-15K',g:'F',tags:['instagram','food']},{p:'TikTok',t:'Macro',n:'Fashion',f:'300K-600K',g:'M',tags:['tiktok','fashion']},{p:'Instagram',t:'Micro',n:'Tech',f:'40K-80K',g:'M',tags:['instagram','tech']},{p:'TikTok',t:'Mega',n:'Lifestyle',f:'2M+',g:'F',tags:['tiktok','lifestyle']},{p:'Instagram',t:'Nano',n:'Beauty',f:'5K-12K',g:'F',tags:['instagram','beauty']}];
+var CAMPS=[{nm:'Beauty Brand - Product Launch',ni:'Beauty',ti:'Micro',rt:'Rp 800K-2M per post'},{nm:'Tech Gadget - Awareness',ni:'Tech',ti:'Macro',rt:'Rp 5M-15M per video'},{nm:'F&B Brand - UGC Series',ni:'Food',ti:'Nano',rt:'Rp 300K-800K per post'},{nm:'Fashion Drop - IG Collab',ni:'Fashion',ti:'Micro',rt:'Rp 1.5M-4M per reel'},{nm:'Lifestyle Brand - Long-term',ni:'Lifestyle',ti:'Macro',rt:'Rp 8M-25M per video'},{nm:'Gaming App - Download Push',ni:'Tech',ti:'Micro',rt:'Rp 1M-3M per content'}];
+var FILTERS=['All','TikTok','Instagram','Beauty','Lifestyle','Tech','Fashion','Food'];
+// Ticker
+(function(){var t=document.getElementById('ticker');var d=BRANDS.concat(BRANDS).map(function(b){return'<div class="tc">'+b+'</div>';}).join('');t.innerHTML=d+d;})();
+// Cases
+(function(){document.getElementById('cgrid').innerHTML=CASES.map(function(c){return'<div class="flip" onclick="this.classList.toggle(\'open\')"><div class="fi2"><div class="ff"><div class="fhint">hover to reveal</div><div class="fcat">'+c.cat+'</div><div class="ftit">'+c.t+'</div></div><div class="fb"><div class="fkpi">'+c.kpi+'</div><div class="fcat">'+c.m+'</div><div class="fst">'+c.d+'</div></div></div></div>';}).join('');})();
+// Estimator
+function est(v){
+  v=parseInt(v);
+  var f=v>=1000?'Rp 1 Miliar':'Rp '+v+' Juta';
+  document.getElementById('bval').textContent=f;
+  var r,k,e,c,mix;
+  if(v<=30){r='450K';k=4;e='11.2%';c=7;mix=[1,0,0,0];}
+  else if(v<=75){r='1.4M';k=8;e='8.5%';c=14;mix=[1,1,0,0];}
+  else if(v<=150){r='3.2M';k=13;e='6.1%';c=22;mix=[0,1,1,0];}
+  else if(v<=350){r='7.8M';k=18;e='4.8%';c=38;mix=[0,1,1,0];}
+  else if(v<=600){r='14M';k=25;e='3.9%';c=55;mix=[0,1,1,1];}
+  else{r='24M';k=35;e='3.2%';c=80;mix=[0,1,1,1];}
+  document.getElementById('er').textContent=r;
+  document.getElementById('ek').textContent=k;
+  document.getElementById('ee').textContent=e;
+  document.getElementById('ec').textContent=c;
+  var labs=['Nano','Micro','Macro','Mega'];
+  document.getElementById('kmix').innerHTML=labs.map(function(l,i){return'<span class="kp'+(mix[i]?' on':'')+'" >'+l+'</span>';}).join('');
+}
+est(100);
+// Gallery
+var af='All';
+function rk(){
+  var l=af==='All'?KOLS:KOLS.filter(function(k){return k.tags.indexOf(af.toLowerCase())>-1;});
+  document.getElementById('kgrid').innerHTML=l.map(function(k){return'<div class="kc"><div class="kav"><div class="kbl"></div><div class="klw"><div class="klk"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M19 11H5a2 2 0 00-2 2v7a2 2 0 002 2h14a2 2 0 002-2v-7a2 2 0 00-2-2zM7 11V7a5 5 0 0110 0v4"/></svg></div></div></div><div class="ki"><span class="kpl'+(k.p==='TikTok'?' tt':'')+'">'+k.p+'</span><div class="kt">'+k.t+'</div><div class="km">'+k.n+' - '+(k.g==='F'?'Female':'Male')+'</div><div class="kf">'+k.f+' followers</div></div><div class="kg"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>NDA required to unlock</div></div>';}).join('');
+}
+(function(){document.getElementById('frow').innerHTML=FILTERS.map(function(f){return'<button class="fch'+(f==='All'?' on':'')+'" onclick="sf2(\''+f+'\',this)">'+f+'</button>';}).join('');rk();})();
+function sf2(f,el){document.querySelectorAll('.fch').forEach(function(c){c.classList.remove('on');});el.classList.add('on');af=f;rk();}
+// Matcher
+var picks={};
+function po(s,v,el){
+  el.closest('.mqo').querySelectorAll('.mopt').forEach(function(b){b.classList.remove('pk');});
+  el.classList.add('pk');picks[s]=v;
+  document.getElementById('ms'+s).classList.add('dn');
+  setTimeout(function(){
+    document.getElementById('mq'+s).style.display='none';
+    if(s<2)document.getElementById('mq'+(s+1)).style.display='block';
+    else sm();
+  },300);
+}
+function sm(){
+  var ni=picks[1]||'';var tm={'1K-10K':'Nano','10K-100K':'Micro','100K-1M':'Macro','1M+':'Mega'};
+  var tl=tm[picks[2]]||'Micro';
+  var ma=CAMPS.filter(function(c){return c.ni===ni||c.ti===tl;}).slice(0,3);
+  document.getElementById('mins').textContent='Profile: '+picks[0]+' - '+ni+' - '+picks[2]+'. Showing '+ma.length+' matching campaigns.';
+  document.getElementById('mlist').innerHTML=ma.map(function(c){return'<div class="mcrow"><div class="mcl"><strong>'+c.nm+'</strong><span>'+c.ni+' - '+c.ti+'</span></div><div class="mcr">'+c.rt+'</div></div>';}).join('')||'<div class="mcrow"><div class="mcl"><strong>Apply anyway - our team will find you something</strong></div></div>';
+  document.getElementById('mres').style.display='block';
+}
+// Reg tabs
+function rt(id,el){document.querySelectorAll('.rtab').forEach(function(t){t.classList.remove('on');});document.querySelectorAll('.rpanel').forEach(function(p){p.classList.remove('sh');});el.classList.add('on');document.getElementById('rp-'+id).classList.add('sh');}
+// Forms
+function sf(e,fi,bi,mi){
+  e.preventDefault();
+  var b=document.getElementById(bi);var m=document.getElementById(mi);var o=b.textContent;
+  b.textContent='Sending...';b.disabled=true;
+  setTimeout(function(){m.textContent='Submitted! We will contact you on WhatsApp within 24 hours.';m.style.display='block';b.textContent=o;b.disabled=false;document.getElementById(fi).reset();setTimeout(function(){m.style.display='none';},5000);},1200);
+}
+// Modal
+function om(id){document.getElementById(id).classList.add('open');}
+function cm(id){document.getElementById(id).classList.remove('open');}
+function openWA(){window.open('https://wa.me/6281234567890','_blank');cm('brief-modal');}
+// Nav
+function go(id,el){document.getElementById(id).scrollIntoView({behavior:'smooth'});if(el){document.querySelectorAll('.ntab').forEach(function(t){t.classList.remove('on');});el.classList.add('on');}}
+// Fade
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.08});
+document.querySelectorAll('.fi').forEach(function(el){obs.observe(el);});
+// Active nav
+var secs=['s-brands','s-gallery','s-brief','s-creators','s-register'];
+window.addEventListener('scroll',function(){var y=window.scrollY+120;secs.forEach(function(id,i){var el=document.getElementById(id);if(!el)return;if(el.offsetTop<=y&&el.offsetTop+el.offsetHeight>y){document.querySelectorAll('.ntab').forEach(function(t){t.classList.remove('on');});var tabs=document.querySelectorAll('.ntab');if(tabs[i])tabs[i].classList.add('on');}});},{passive:true});
+</script>
+</body>
+</html>
